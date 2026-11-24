@@ -45,7 +45,7 @@ All of Mira's own environment variables still work: https://docs.miracode.ai/con
 
 ## Resources
 
-Mira idles at about 75 MB of RAM and stayed under 0.5 GB while reviewing and indexing in our tests, so it runs on Railway's Free plan (0.5 GB per service, one volume). Very large repositories need more memory while indexing.
+On Railway with a 0.5 GB / 1 vCPU limit, Mira peaked at about 120 MB of RAM while indexing a 400-file repository and reviewing a pull request, so it runs on Railway's Free plan (0.5 GB per service, one volume). Very large repositories need more memory while indexing.
 
 ## Updates
 

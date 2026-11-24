@@ -43,7 +43,7 @@ After deploy:
 
 Models: `MIRA_MODEL` defaults to `anthropic/claude-sonnet-4-6` on OpenRouter. For another endpoint set `LLM_BASE_URL` (for example `https://api.openai.com/v1`) and a model id that endpoint knows. Extra deployment settings can go in `MIRA_CONFIG_YAML` (YAML, same keys as Mira's `mira.yaml`).
 
-Resources: Mira used about 75 MB of RAM idle and about 120 MB while indexing a small repo in our tests, so it runs within a 0.5 GB service. Very large repos need more memory while indexing. Mira's optional Codex CLI and AWS Bedrock backends aren't configured by this template.
+Resources: on Railway with a 0.5 GB / 1 vCPU limit, Mira peaked at about 120 MB of RAM while indexing a 400-file repository and reviewing a pull request, so it fits the Free plan. Very large repos need more memory while indexing. Mira's optional Codex CLI and AWS Bedrock backends aren't configured by this template.
 
 Updates: the Mira service builds from the template repository. When we bump the pinned Mira version there, Railway shows an update in your project; read the repository's CHANGELOG.md, then apply it. Postgres data is kept.
 
